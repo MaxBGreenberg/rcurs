@@ -1,0 +1,26 @@
+%%
+% Provides package "rcurs"
+% Created by Max Greenberg, April 14th, 2021
+% Package defining cursive symbol used by David Griffiths
+% Definitions based on files from Griffiths' webpage, with modifications found on the TeX StackExchange
+% Image files provided by Dr. David Griffiths
+% This package automatically loads the graphicx package
+% Uses PDF image files and graphicx package to define the forms of these
+% The PDF images and Griffiths' original TeX file defining these characters are available on his webpage
+% These symbols work in math mode and paragraph mode
+% Only one font size
+
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{rcurs}
+\RequirePackage{graphicx}																							% Loads graphicx.sty
+
+\def\rcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics[trim = 1em 0 14em 0,clip]{ScriptR.pdf}}$}}}			% script r
+\def\brcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics[trim = 1em 0 14em 0,clip]{BoldR.pdf}}$}}}				% bold script r
+\def\hrcurs{{\mbox{$\hat\rcurs$}}}																					% script r with hat
+\def\hbrcurs{{\mbox{$\hat\brcurs$}}}																				% bold script r with hat
+\def\vrcurs{{\mbox{$\vec\rcurs$}}}																					% script r with vector arrow
+\def\vbrcurs{{\mbox{$\vec\brcurs$}}}																				% bold script r with vector arrow
+
+\endinput
+%%
+% End of file "rcurs.sty"
